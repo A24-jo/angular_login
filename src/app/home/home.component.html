@@ -1,0 +1,19 @@
+<div class="toolbar">
+   
+    <div class="container">
+      <div class="imgUser"> 
+        <img src="../../assets/user.svg" alt="user" height="100px" > 
+      </div>
+      <h2>Datos del Usuario</h2>
+      <div class="user-info">
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Nombre:</strong> {{ name }}</p>
+        <p><strong>DNI:</strong> <input type="text" [(ngModel)]="dni" [disabled]="update">
+          <button class="update" (click)="user()" > {{editar}} </button>
+        </p>
+        <p><strong>Apellido Paterno:</strong> {{ apellidopaterno }}</p>
+        <p><strong>Apellido Materno:</strong> {{ apellidomaterno }}</p>
+        <button (click)="Sign_off()"> cerrar secion </button>
+      </div>
+    </div>
+  </div>
