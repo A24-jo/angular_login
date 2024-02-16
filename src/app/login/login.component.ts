@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit  {
 
 
   login() {
-    this.http.post('http://localhost:4000/api/v1/user/login', { email: this.username, password: this.password })
+    this.http.post('https://mychats-whd7.onrender.com/api/v1/user/login', { email: this.username, password: this.password })
       .subscribe((response: any) => {
        
         if(response.token){

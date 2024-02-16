@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
       const datos = JSON.parse(data);
       this.userId = datos.user.userId;
 
-      this.http.get<UserData>(`http://localhost:4000/api/v1/user/perfil/${this.userId}`)
+      this.http.get<UserData>(`https://mychats-whd7.onrender.com/api/v1/user/perfil/${this.userId}`)
       .subscribe(data=>{
            this.name= data.name;
            this.email= data.email;
@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
       this.editar = "listo";
       this.update=false;
     }else{
-     this.http.post("http://localhost:4000/api/v1/user/update",{userId:this.userId,dni:this.dni})
+     this.http.post("https://mychats-whd7.onrender.com/api/v1/user/update",{userId:this.userId,dni:this.dni})
       .subscribe((response:any)=>{
        if(response === "Perfil actualizado exitosamente"){
                 this._snackBar.open("modificado con exito", "exito", {

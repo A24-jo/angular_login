@@ -40,7 +40,7 @@ export class RegisterComponent {
       return;
     }
 
-   this.http.post("http://localhost:4000/api/v1/user/register",{
+   this.http.post("https://mychats-whd7.onrender.com/api/v1/user/register",{
     email:this.correo,
     name:this.nombre,
     password:this.contrase,
